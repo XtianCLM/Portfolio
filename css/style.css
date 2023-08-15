@@ -1,0 +1,505 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+ --clr-primary-accent-400:#5DB2A5;
+--clr-accent-300:#71BEA4;
+--clr-accent-200:#86C9A6;
+--clr-accent-100:#9BD3AB;
+/* 
+--clr-neutral-500: #2f2f2f; */
+--clr-neutral-500: #1C1C1C;
+--clr-primary-neutral-400: #2f2f2f;
+--clr-neutral-300: #4E4E4E;
+--clr-neutral-200: #696969;
+--clr-neutral-100: #858585;
+--clr-neutral-50:#C6C6C6;
+
+--clr-white-000:#DFDFDF;
+
+--ff-primary:'Poppins', sans-serif;
+
+
+--ff-body:var(--ff-primary);
+
+--fw-bold-700:700;
+--fw-semibold-500:500;
+--fw-regular-400:400;
+
+/* 10px */
+--fs-40:0.625rem;
+/* 11px */
+--fs-50:0.6875rem;
+/* 13px */
+--fs-100:0.8125rem;
+/* 15px */
+--fs-150:0.9375rem;
+/* 16px */
+--fs-200:1rem;
+/* 17px */
+--fs-300:1.0625;
+/* 22px */
+--fs-400:1.375rem;
+/* 30px */
+--fs-500:1.875rem;
+/* 40px */
+--fs-600:2.5rem;
+/* 50px */
+--fs-700:3.5rem;
+--fs-800:4rem;
+--fs-900:5rem;
+
+
+--fs-body:var(--fs-100);
+--fs-small-heading:var(--fs-50);
+--fs-small-sub-heading:var(--fs-150);
+--fs-primary-heading:var(--fs-500);
+--fs-secondary-heading:var(--fs-400);
+--fs-tertiary-heading:var(--fs-300);
+--fs-nav:var(--fs-200);
+--fs-button:var(--fs-150);
+--fs-card: var(--fs-100);
+
+
+
+--size-100: 0.25rem;
+--size-200: 0.5rem;
+--size-300: 0.75rem;
+--size-400: 1rem;
+--size-500: 1.5rem;
+--size-600: 2rem;
+--size-700: 3rem;
+--size-800: 4rem;
+--size-900: 5rem;
+
+
+--_spacer:1rem;
+
+
+}
+@media(min-width:47em) and (max-width:69em){
+    :root{
+        --fs-button:var(--fs-150);
+        --fs-nav:var(--fs-200);
+        --fs-body:var(--fs-300);
+        --fs-small-sub-heading:var(--fs-200);
+        --fs-primary-heading:var(--fs-600);
+        --fs-secondary-heading:var(--fs-500);
+        --fs-tertiary-heading:var(--fs-400);
+    }
+    
+}
+@media(min-width:69em){
+    :root{
+        --fs-button:var(--fs-150);
+        --fs-card:var(--fs-200);
+        --fs-body:var(--fs-400);
+        --fs-small-heading:var(--fs-200);
+        --fs-small-sub-heading:var(--fs-300);
+        --fs-primary-heading:var(--fs-700);
+        --fs-secondary-heading:var(--fs-600);
+        --fs-tertiary-heading:var(--fs-500);
+        --fs-nav:var(--fs-200);
+    }
+}
+
+
+
+/* Third Section */
+
+.flex-columns-layout{
+    --_gap-spacer:2em;
+    display: flex;
+    gap: var(--_gap-spacer);
+    flex-direction: column;
+}
+
+.Split{
+    display: flex;
+    flex-direction: column;
+    gap: var(--_gap-spacer);
+}
+.Split>*:not(.no-bg-card){
+    background-color: var(--clr-primary-neutral-400);
+    padding: 1em 2em;
+    border-radius: 0.5em;
+}
+
+
+
+@media(min-width:53.5625em){
+    .flex-columns-layout{
+        flex-direction: row;
+    }
+
+    .flex-columns-layout>*{
+        flex-basis: 100%;
+    }
+
+}
+
+.Card{
+
+    display: grid;
+    background-image:  radial-gradient(circle at top right,rgba(245, 246, 252, 0.30),var(--clr-primary-neutral-400),var(--clr-primary-neutral-400)),url('../assets/Icon/GridLayout.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right top;
+    grid-template-areas: 
+    'one' 
+    'two'
+    'three'
+    'four';
+    box-shadow: 0px 1px 0px 0px  rgba(0,0,0,0.04),
+    -1px 0px 0px 0px rgba(0,0,0,0.04), 
+    -1px 2px 0px 0px rgba(0,0,0,0.04), 
+    -2px 1px 0px 0px rgba(0,0,0,0.04), 
+    -2px 3px 0px 0px rgba(0,0,0,0.04), 
+    -3px 2px 0px 0px rgba(0,0,0,0.04), 
+    -3px 4px 0px 0px rgba(0,0,0,0.04), 
+    -4px 3px 0px 0px rgba(0,0,0,0.04), 
+    -4px 5px 0px 0px rgba(0,0,0,0.04), 
+    -5px 4px 0px 0px rgba(0,0,0,0.04), 
+    -5px 6px 0px 0px rgba(0,0,0,0.04), 
+    -6px 5px 0px 0px rgba(0,0,0,0.04), 
+    -6px 7px 0px 0px rgba(0,0,0,0.04), 
+    -7px 6px 0px 0px rgba(0,0,0,0.04), 
+    -7px 8px 0px 0px rgba(0,0,0,0.04), 
+    -8px 7px 0px 0px rgba(0,0,0,0.04);
+  
+ 
+}
+
+
+
+
+/* Temporary Code Neep Optimization */
+.NumItem1::before,
+.NumItem2::before,
+.NumItem3::before,
+.NumItem4::before{
+    display: block;
+    color: var(--clr-neutral-500);
+    width: min-content;
+    border-radius: 0.5rem;
+    padding-inline: 0.7rem;
+    border: 2px dotted rgba(203, 200, 204, 0.5);
+
+}
+
+.NumItem1::before{
+    content:'01';
+}
+
+.NumItem2::before{
+    content:'02';
+}
+.NumItem3::before{
+    content:'03';
+}
+
+
+/* Temporary Code Neep Optimization */
+
+
+
+
+
+
+
+.Item1{
+    grid-area: one;
+}
+
+.Item2{
+    grid-area: two;
+    justify-self: center;
+    align-self: center;
+}
+.Item3{
+    grid-area: three;
+}
+.Item4{
+    grid-area: four;
+}
+@media(min-width:10em){
+    .Card>img{
+        max-width: 7rem;
+    }
+    .Card{
+        grid-template-areas: 'one'
+        'two '
+        'three '
+        'four ';
+    }
+}
+
+@media(min-width:47.9375em){
+    .Card>img{
+        max-width: 8rem;
+    }
+    .Card{
+        grid-template-areas: 'one one two '
+        'three three two '
+        'four four four ';
+    }
+    
+}
+
+
+
+/* Card Generalize style */
+
+.Item4>ul{
+    margin-inline: 1rem;
+}
+
+.Achivement-List{
+    margin-left: 1rem;
+    padding-block: 1rem;
+}
+.Achivement-List>li{
+    padding-bottom: 0.5rem;
+}  
+/* Card Generalize style */
+
+
+
+
+
+/* College Card */
+
+
+
+/* College Card */
+
+
+/* Senior High */
+
+
+
+/* Senior High */
+
+
+/* Junior High */
+
+
+/* Junior High*/
+
+.FrontEnd{
+    grid-area: FrontEnd;
+}
+.BackEnd{
+    grid-area: BackEnd;
+}
+.Database{
+    grid-area:Database;
+}
+
+
+
+/* My Skills Style */
+
+.grid-areas-skills{
+    display:grid;
+    gap: var(--_spacer);
+    justify-content: center;
+    grid-template-areas: 
+    'FrontEnd' 
+    'BackEnd'
+    'Database';
+
+}
+@media(min-width:34em){
+    .grid-areas-skills{
+        display:grid;
+        gap: var(--_spacer);
+        justify-content: center;
+        grid-template-areas: 
+        'FrontEnd FrontEnd' 
+        ' BackEnd Database';
+    
+    }
+}
+.grid-areas-skills>.FrontEnd>.skills-diplay-flex{
+    display: flex;
+    gap: var(--_spacer);
+    list-style: none;
+    text-align: center;
+ 
+}
+.platform>p>i>img,
+.BackEnd>div>p>i>img,
+.Database>div>p>i>img{
+    max-width: 2rem;
+    display: inline;
+   
+}
+.skills-diplay-flex>li>p,
+.BackEnd>div,
+.Database>div{
+    padding: 0.5rem 1rem;
+    background: linear-gradient(90deg, var(--clr-primary-neutral-400) 45%, rgba(93,178,165,0.4));
+    border-radius: 0.3rem;
+    box-shadow: 0px 1px 0px 0px  rgba(0,0,0,0.04),
+    -1px 0px 0px 0px rgba(0,0,0,0.04), 
+    -1px 2px 0px 0px rgba(0,0,0,0.04), 
+    -2px 1px 0px 0px rgba(0,0,0,0.04), 
+    -2px 3px 0px 0px rgba(0,0,0,0.04), 
+    -3px 2px 0px 0px rgba(0,0,0,0.04), 
+    -3px 4px 0px 0px rgba(0,0,0,0.04), 
+    -4px 3px 0px 0px rgba(0,0,0,0.04), 
+    -4px 5px 0px 0px rgba(0,0,0,0.04), 
+    -5px 4px 0px 0px rgba(0,0,0,0.04), 
+    -5px 6px 0px 0px rgba(0,0,0,0.04), 
+    -6px 5px 0px 0px rgba(0,0,0,0.04), 
+    -6px 7px 0px 0px rgba(0,0,0,0.04), 
+    -7px 6px 0px 0px rgba(0,0,0,0.04), 
+    -7px 8px 0px 0px rgba(0,0,0,0.04), 
+    -8px 7px 0px 0px rgba(0,0,0,0.04);
+   
+}
+
+
+
+.FrontEnd>h3,
+.BackEnd>h3,
+.Database>h3{
+    text-align: center;
+}
+
+
+/* Certificates Style */
+.title-cert-margin-bot{
+    margin-bottom: 3rem;
+}
+
+.GridLayout-Cert{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    padding-block: var(--_spacer);
+    background: linear-gradient(90deg, var(--clr-primary-neutral-400) 45%, rgba(93,178,165,0.4));
+    box-shadow: 0px 1px 0px 0px  rgba(0,0,0,0.04),
+                -1px 0px 0px 0px rgba(0,0,0,0.04), 
+                -1px 2px 0px 0px rgba(0,0,0,0.04), 
+                -2px 1px 0px 0px rgba(0,0,0,0.04), 
+                -2px 3px 0px 0px rgba(0,0,0,0.04), 
+                -3px 2px 0px 0px rgba(0,0,0,0.04), 
+                -3px 4px 0px 0px rgba(0,0,0,0.04), 
+                -4px 3px 0px 0px rgba(0,0,0,0.04), 
+                -4px 5px 0px 0px rgba(0,0,0,0.04), 
+                -5px 4px 0px 0px rgba(0,0,0,0.04), 
+                -5px 6px 0px 0px rgba(0,0,0,0.04), 
+                -6px 5px 0px 0px rgba(0,0,0,0.04), 
+                -6px 7px 0px 0px rgba(0,0,0,0.04), 
+                -7px 6px 0px 0px rgba(0,0,0,0.04), 
+                -7px 8px 0px 0px rgba(0,0,0,0.04), 
+                -8px 7px 0px 0px rgba(0,0,0,0.04);
+    border-radius: 0.3rem;
+    padding-inline: 0.5rem;
+    
+}
+.GridLayout-Cert>.absolute-Cert-Overflow>img{
+    max-width: 12rem;
+    aspect-ratio: 16/11;
+    border-radius: 0.3rem;
+    margin-inline: auto;
+}
+.Cert_List{
+    display: flex;
+    gap: var(--_spacer);
+    align-items: center;
+    justify-content: center;
+   
+  }
+.Certs>img{
+      max-width: 7rem;
+      aspect-ratio: 16/9;
+      
+  }
+.Certs>img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.2s 0s ease-in-out;
+    box-shadow: 0px 0.5rem 2rem rgba(93,178,165,0.4);
+  }
+.Certs{
+      list-style: none;
+  }
+.Cert-Content{
+    position: relative;
+}
+.Cert-Content>.Cert1{
+    position: absolute;
+   
+}
+
+.Cert-Content>.Cert1[data-visible=false],
+.Cert-Content>.Cert2[data-visible=false]{
+    opacity: 0;
+    transition: opacity 0.2s 0s ease-in;
+}
+
+.Cert-Content>.Cert1[data-visible=true],
+.Cert-Content>.Cert2[data-visible=true]{
+    visibility: 1;
+    transition: opacity 0.2s 0s ease-out;
+}
+
+
+@media(min-width:34em) and (max-width:70em){
+    .GridLayout-Cert>.absolute-Cert-Overflow>img{
+        max-width: 20rem;
+        border-radius: 0.3rem;
+        margin-inline: auto;
+    }
+}
+
+
+@media(min-width:70em){
+    .GridLayout-Cert{
+        grid-template-columns: 30rem auto;
+        padding-inline: var(--_spacer);
+
+    }
+    .GridLayout-Cert>*{
+        justify-self: center;
+    }
+    .GridLayout-Cert>.absolute-Cert-Overflow{
+        position: relative;
+        overflow-y: visible;
+    }
+    .GridLayout-Cert>.absolute-Cert-Overflow>img{
+        max-width: 23rem;
+        left: -14rem;
+        top: -3.5rem;
+        position: absolute;
+        border-radius: 0.3rem;
+        box-shadow: 0px 1px 0px 0px  rgba(0,0,0,0.04),
+        -1px 0px 0px 0px rgba(0,0,0,0.04), 
+        -1px 2px 0px 0px rgba(0,0,0,0.04), 
+        -2px 1px 0px 0px rgba(0,0,0,0.04), 
+        -2px 3px 0px 0px rgba(0,0,0,0.04), 
+        -3px 2px 0px 0px rgba(0,0,0,0.04), 
+        -3px 4px 0px 0px rgba(0,0,0,0.04), 
+        -4px 3px 0px 0px rgba(0,0,0,0.04), 
+        -4px 5px 0px 0px rgba(0,0,0,0.04), 
+        -5px 4px 0px 0px rgba(0,0,0,0.04), 
+        -5px 6px 0px 0px rgba(0,0,0,0.04), 
+        -6px 5px 0px 0px rgba(0,0,0,0.04), 
+        -6px 7px 0px 0px rgba(0,0,0,0.04), 
+        -7px 6px 0px 0px rgba(0,0,0,0.04), 
+        -7px 8px 0px 0px rgba(0,0,0,0.04), 
+        -8px 7px 0px 0px rgba(0,0,0,0.04);
+    }  
+
+}
+
+
+
+
+
+
