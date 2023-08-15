@@ -1,3 +1,14 @@
+// For navbar placeholder
+
+document.addEventListener("DOMContentLoaded", async () => {
+    const navbarResponse = await fetch("Navbar.html");
+    const navbarContent = await navbarResponse.text();
+    
+    const navbarPlaceholder = document.getElementById("navbar-placeholder");
+    navbarPlaceholder.innerHTML = navbarContent;
+  });
+
+
 // For Navigation Bar
 
 let primaryNav = document.querySelector(".nav-list");
@@ -18,15 +29,17 @@ navtoggle.addEventListener("click", function(){
 })
 
 
-// For Resume
 
-let resume = document.getElementById('resume');
+  // For Resume
 
-let path = '../assets/PDF/resume.pdf';
+  const resume = document.getElementById('resume');
 
-resume.addEventListener('click', ()=>{
-    window.location.href = path;
-});
+  const path = '../assets/PDF/resume.pdf';
+  
+  resume.addEventListener('click', ()=>{
+      window.location.href = path;
+  });
+  
 
 
 // For Arrow Scroll
