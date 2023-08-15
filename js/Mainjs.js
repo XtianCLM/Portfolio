@@ -145,9 +145,9 @@ function ChangeContent2(Cert){
 
 ScrollReveal({
     reset: true,
-    distance: '50px',
-    duration: 2000,
-    delay: 50
+    distance: '80px',
+    duration: 1000,
+    delay: 20
 });
 
 ScrollReveal().reveal('.even-columns h1',{origin: 'top'});
@@ -162,4 +162,21 @@ ScrollReveal().reveal('.Icon2',{origin: 'top', delay: 100});
 ScrollReveal().reveal('.Icon3',{origin: 'top', delay: 200});
 ScrollReveal().reveal('.Icon4',{origin: 'top', delay: 300});
 ScrollReveal().reveal('.Item2',{origin: 'right'});
+
+
+ScrollReveal().reveal('.Col1 img',{origin: 'left'});
+ScrollReveal().reveal('.Col1 .text-align-center',{origin: 'top', delay: 200});
+
+ScrollReveal().reveal('.Profile-list',{origin: 'bottom'});
+ScrollReveal().reveal('.Contact-list',{origin: 'bottom'});
+
+
+
+ScrollReveal().reveal('.service1',{origin: 'left', delay:300});
+ScrollReveal().reveal('.text-Service',{origin: 'bottom', delay:500});
+ScrollReveal().reveal('.service2',{origin: 'bottom', delay:300});
+ScrollReveal().reveal('.service3',{origin: 'right', delay:300});
+
+
+
 
