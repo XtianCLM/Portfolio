@@ -145,7 +145,7 @@ function ChangeContent2(Cert){
 
 ScrollReveal({
     reset: true,
-    distance: '10px',
+    distance: '40px',
     duration: 1000,
     delay: 20
 });
@@ -161,7 +161,7 @@ ScrollReveal().reveal('.Icon1',{origin: 'top'});
 ScrollReveal().reveal('.Icon2',{origin: 'top', delay: 100});
 ScrollReveal().reveal('.Icon3',{origin: 'top', delay: 200});
 ScrollReveal().reveal('.Icon4',{origin: 'top', delay: 300});
-ScrollReveal().reveal('.Item2',{origin: 'right'});
+
 
 
 ScrollReveal().reveal('.Col1 img',{origin: 'top'});
