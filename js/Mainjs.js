@@ -145,7 +145,7 @@ function ChangeContent2(Cert){
 
 ScrollReveal({
     reset: true,
-    distance: '20px',
+    distance: '80px',
     duration: 1000,
     delay: 20
 });
