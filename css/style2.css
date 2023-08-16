@@ -353,13 +353,13 @@ body{
     font-size: var(--fs-body) ;
     color: var(--clr-neutral-500);
 
-    overflow-x: hidden;
 }
 
 .even-columns{
     display: grid;
     gap: 3em;
     align-items: center;
+  
     
 }
 
@@ -477,6 +477,7 @@ body{
 
         transform: translateX(100%);
         transition: transform 350ms ease-out;
+        
     }
 
     @supports(backdrop-filter: blur(0.5rem)){

@@ -145,7 +145,7 @@ function ChangeContent2(Cert){
 
 ScrollReveal({
     reset: true,
-    distance: '80px',
+    distance: '100px',
     duration: 1000,
     delay: 20
 });
@@ -169,14 +169,6 @@ ScrollReveal().reveal('.Col1 .text-align-center',{origin: 'top', delay: 200});
 
 ScrollReveal().reveal('.Profile-list',{origin: 'bottom'});
 ScrollReveal().reveal('.Contact-list',{origin: 'bottom'});
-
-
-
-ScrollReveal().reveal('.service1',{origin: 'left', delay:300});
-ScrollReveal().reveal('.text-Service',{origin: 'bottom', delay:500});
-ScrollReveal().reveal('.service2',{origin: 'bottom', delay:300});
-ScrollReveal().reveal('.service3',{origin: 'right', delay:300});
-
 
 
 
