@@ -164,11 +164,11 @@ ScrollReveal().reveal('.Icon4',{origin: 'top', delay: 300});
 ScrollReveal().reveal('.Item2',{origin: 'right'});
 
 
-ScrollReveal().reveal('.Col1 img',{origin: 'left'});
-ScrollReveal().reveal('.Col1 .text-align-center',{origin: 'top', delay: 200});
+// ScrollReveal().reveal('.Col1 img',{origin: 'left'});
+// ScrollReveal().reveal('.Col1 .text-align-center',{origin: 'top', delay: 200});
 
-ScrollReveal().reveal('.Profile-list',{origin: 'bottom'});
-ScrollReveal().reveal('.Contact-list',{origin: 'bottom'});
+// ScrollReveal().reveal('.Profile-list',{origin: 'bottom'});
+// ScrollReveal().reveal('.Contact-list',{origin: 'bottom'});
 
 
 
