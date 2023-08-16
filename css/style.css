@@ -362,12 +362,14 @@ body{
     gap: 3em;
     align-items: center;
     
+    
 }
 
 @media(min-width:70em){
     .even-columns{
         grid-auto-flow: column;
         grid-auto-columns: 1fr;
+        
         
     }
 }
@@ -597,6 +599,7 @@ body{
 }
 .-My-Img-Bg{
     max-width: 15rem;
+    transition: max-width 0.5s ease-in-out;
 }
 
 
@@ -672,9 +675,10 @@ body{
 
 
 @media(min-width:47.9375em) and (max-width:69em){
-    .-My-Img-Bg{
+    .-My-Img-Bg.tablet{
         max-width: 30rem;
     }
+    
     .horizontal-heading>img{
         width: var(--size-600);
     }
@@ -715,10 +719,10 @@ body{
     .Img-dimension-right-content>.imgWrapper>.Proj3{
         width: 5rem;
     }
-    .-My-Img-Bg{
+    .-My-Img-Bg.computer{
         max-width: revert;
-    
     }
+    
     .Img-dimension-right-content>.imgWrapper{
         position: relative;
         width: min-content;
@@ -918,6 +922,7 @@ body{
     max-width: 12rem;
     margin-inline: auto;
     padding-bottom: 2rem;
+    transition: max-width 0.5s ease-in-out;
 }
 .grid-split-col{
     display: grid;
@@ -984,6 +989,7 @@ body{
 @media(min-width:30em) and (max-width:70em){
     .Col1>img{
         max-width: 20rem;
+       
     }
     .grid-split-col{
         grid-template-columns: repeat(2, 1fr);
@@ -1493,6 +1499,8 @@ body{
 
 }
 
+
+
 .BackEnd>div{
     text-align: center;
 }
@@ -1535,6 +1543,7 @@ body{
 .skills-diplay-flex>li>p,
 .BackEnd>div,
 .Database>div{
+    
     padding: 0.5rem 1rem;
     background: linear-gradient(90deg, var(--clr-primary-neutral-400) 45%, rgba(93,178,165,0.4));
     border-radius: 0.3rem;
