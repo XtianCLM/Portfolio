@@ -598,7 +598,7 @@ body{
     justify-self: center;
 }
 .-My-Img-Bg{
-    max-width: 15rem;
+    max-width: 17rem;
     transition: max-width 0.5s ease-in-out;
 }
 
