@@ -572,13 +572,14 @@ body{
     position: absolute;
     content: '';
     width: 100%;
-    height: 2px;
+    height: 3px;
     top: 100%;
     left: 0;
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
     transform-origin: right;
     background-color: var(--clr-accent-200);
+    border-radius: 0.3rem;
 }
 
 .SocialLinks:hover::after,
@@ -586,41 +587,6 @@ body{
     transform: scaleX(1);
     transform-origin: left;
 }
-/* .Icon1::before,
-.Icon2::before,
-.Icon3::before,
-.Icon4::before{
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-
-}
-
-.Icon1:hover::before,
-.Icon2:hover::before,
-.Icon3:hover::before,
-.Icon4:hover::before{
-    
-    color: var(--clr-accent-100);
-    
-}
-
-.Icon1::before{
-    font: var(--fa-font-brands);
-    content: "\f16d";
-}
-
-.Icon2::before{
-    font: var(--fa-font-brands);
-    content: "\f09a";
-}
-.Icon3::before{
-    font: var(--fa-font-brands);
-    content: "\f08c";
-}
-.Icon4::before{
-    font: var(--fa-font-brands);
-    content: "\f09b";
-} */
 
 
 /* Column2 or Right */
