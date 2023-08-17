@@ -458,6 +458,13 @@ body{
     display: flex;
     gap: 2em;
 }
+.nav-list>li>a{
+    position: relative;
+}
+
+.nav-list>li>a:hover{
+    color: var(--clr-primary-accent-400);
+}
 
 .nav-toggle{
     display: none;
@@ -549,26 +556,52 @@ body{
 /* Social Links Style */
 .social-links{
     display: flex;
-    gap: 3em;
+    gap: var(--_spacer)
     
 }
+.SocialLinks:hover{
+    color: var(--clr-primary-accent-400);
+}
+.SocialLinks{
+    position: relative;
+    cursor: pointer;
 
-.Icon1::before,
+}
+.SocialLinks::after,
+.nav-list>li>a::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    top: 100%;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: right;
+    background-color: var(--clr-accent-200);
+}
+
+.SocialLinks:hover::after,
+.nav-list>li>a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+/* .Icon1::before,
 .Icon2::before,
 .Icon3::before,
 .Icon4::before{
-
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
+
 }
 
-.Icon1:hover,
-.Icon2:hover,
-.Icon3:hover,
-.Icon4:hover{
+.Icon1:hover::before,
+.Icon2:hover::before,
+.Icon3:hover::before,
+.Icon4:hover::before{
+    
     color: var(--clr-accent-100);
-    box-shadow: 0 2px  white;
-    transition: 0.5s ease-out;
+    
 }
 
 .Icon1::before{
@@ -587,7 +620,7 @@ body{
 .Icon4::before{
     font: var(--fa-font-brands);
     content: "\f09b";
-}
+} */
 
 
 /* Column2 or Right */
@@ -614,7 +647,7 @@ body{
     animation: floating 5s infinite;
     border-radius: 0.3rem;
     box-shadow: 0px 30px 90px  rgba(155, 211, 171, 1);
-    opacity: 0.85;
+    border: 3px solid var(--clr-neutral-50);
 }
 
 .Img-dimension-right-content>.imgWrapper>.Proj3{
@@ -623,7 +656,7 @@ body{
     animation: floating 7s infinite;
     border-radius: 0.3rem;
     box-shadow: 0px 30px 90px  rgba(155, 211, 171, 1);
-    opacity: 0.85;
+    border: 3px solid var(--clr-neutral-50);
 }
 
 
@@ -1607,8 +1640,8 @@ body{
     
 }
 .GridLayout-Cert>.absolute-Cert-Overflow>img{
-    max-width: 12rem;
-    aspect-ratio: 16/11;
+    max-width: 14rem;
+    transition: max-width 0.5s ease-in-out;
     border-radius: 0.3rem;
     margin-inline: auto;
 }
@@ -1621,7 +1654,9 @@ body{
   }
 .Certs>img{
       max-width: 7rem;
+      border-radius: 0.3rem;
       aspect-ratio: 16/9;
+     
       
   }
 .Certs>img:hover{
