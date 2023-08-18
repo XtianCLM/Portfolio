@@ -385,6 +385,9 @@ body{
     margin-inline: auto;
 }
 
+.Border.skills{
+    width: min(50%,100%);
+}
 /* general styling */
 
 
@@ -1004,93 +1007,94 @@ body{
     }
 }
 
-/* Interest */
-.Interest-grid-template{
-    display: grid;
+/* My Skills Style */
+
+.grid-areas-skills{
+    display:grid;
     gap: var(--_spacer);
-    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    grid-template-areas: 
+    'FrontEnd' 
+    'BackEnd'
+    'Database';
+
 }
 
-@media(min-width:30em) and (max-width:70em){
-    .Interest-grid-template{
-        grid-template-columns: repeat(2, 1fr);
+
+
+.BackEnd>div{
+    text-align: center;
+}
+.BackEnd{
+    margin-inline: 3rem;
+}
+.Database>div{
+    text-align: center;
+}
+.Database{
+    margin-inline: 3rem;
+}
+
+@media(min-width:34em){
+    .grid-areas-skills{
+        display:grid;
+        gap: var(--_spacer);
+        justify-content: center;
+        grid-template-areas: 
+        'FrontEnd FrontEnd' 
+        'BackEnd Database';
+    
     }
+    
 }
-
-@media(min-width:70em){
-    .Interest-grid-template{
-        grid-template-columns: repeat(3, 1fr);
-    }
+.grid-areas-skills>.FrontEnd>.skills-diplay-flex{
+    display: flex;
+    gap: var(--_spacer);
+    list-style: none;
+    text-align: center;
+ 
 }
-
-.Interest-grid-template>*{
-    box-shadow: 0px 1px 0px 0px  rgba(0,0,0,0.04),
-                -1px 0px 0px 0px rgba(0,0,0,0.04), 
-                -1px 2px 0px 0px rgba(0,0,0,0.04), 
-                -2px 1px 0px 0px rgba(0,0,0,0.04), 
-                -2px 3px 0px 0px rgba(0,0,0,0.04), 
-                -3px 2px 0px 0px rgba(0,0,0,0.04), 
-                -3px 4px 0px 0px rgba(0,0,0,0.04), 
-                -4px 3px 0px 0px rgba(0,0,0,0.04), 
-                -4px 5px 0px 0px rgba(0,0,0,0.04), 
-                -5px 4px 0px 0px rgba(0,0,0,0.04), 
-                -5px 6px 0px 0px rgba(0,0,0,0.04), 
-                -6px 5px 0px 0px rgba(0,0,0,0.04), 
-                -6px 7px 0px 0px rgba(0,0,0,0.04), 
-                -7px 6px 0px 0px rgba(0,0,0,0.04), 
-                -7px 8px 0px 0px rgba(0,0,0,0.04), 
-                -8px 7px 0px 0px rgba(0,0,0,0.04);
+.platform>p>i>img,
+.BackEnd>div>p>i>img,
+.Database>div>p>i>img{
+    max-width: 2rem;
+    display: inline;
+   
+}
+.skills-diplay-flex>li>p,
+.BackEnd>div,
+.Database>div{
+    
+    padding: 0.5rem 1rem;
     background: linear-gradient(90deg, var(--clr-primary-neutral-400) 45%, rgba(93,178,165,0.4));
-    padding: 2rem;
     border-radius: 0.3rem;
-}
-.Interest-grid-template>*:hover{
-    cursor: pointer;
-}
-.Interest2::before,
-.Interest1::before,
-.Interest3::before,
-.Interest4::before,
-.Interest5::before,
-.Interest6::before{
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    color: var(--clr-primary-accent-400);
-}
-.Interest2>h6,
-.Interest1>h6,
-.Interest3>h6,
-.Interest4>h6,
-.Interest5>h6,
-.Interest6>h6{
-    display: inline-flex;
-    padding-inline: 2rem;
+    box-shadow: 0px 1px 0px 0px  rgba(0,0,0,0.04),
+    -1px 0px 0px 0px rgba(0,0,0,0.04), 
+    -1px 2px 0px 0px rgba(0,0,0,0.04), 
+    -2px 1px 0px 0px rgba(0,0,0,0.04), 
+    -2px 3px 0px 0px rgba(0,0,0,0.04), 
+    -3px 2px 0px 0px rgba(0,0,0,0.04), 
+    -3px 4px 0px 0px rgba(0,0,0,0.04), 
+    -4px 3px 0px 0px rgba(0,0,0,0.04), 
+    -4px 5px 0px 0px rgba(0,0,0,0.04), 
+    -5px 4px 0px 0px rgba(0,0,0,0.04), 
+    -5px 6px 0px 0px rgba(0,0,0,0.04), 
+    -6px 5px 0px 0px rgba(0,0,0,0.04), 
+    -6px 7px 0px 0px rgba(0,0,0,0.04), 
+    -7px 6px 0px 0px rgba(0,0,0,0.04), 
+    -7px 8px 0px 0px rgba(0,0,0,0.04), 
+    -8px 7px 0px 0px rgba(0,0,0,0.04);
+   
 }
 
-.Interest1::before{
-    font: var(--fa-font-solid);
-    content: "\f008";
+
+
+.FrontEnd>h3,
+.BackEnd>h3,
+.Database>h3{
+    text-align: center;
 }
-.Interest2::before{
-    font: var(--fa-font-solid);
-    content: "\f11b";
-}
-.Interest3::before{
-  font: var(--fa-font-solid);
-    content: "\f001";
-}
-.Interest4::before{
-  font: var(--fa-font-solid);
-    content: "\f121";
-}
-.Interest5::before{
-  font: var(--fa-font-solid);
-    content: "\f434";
-}
-.Interest6::before{
-  font: var(--fa-font-solid);
-    content: "\f44b";
-}
+
 
 /* Service */
 .text-Service{
@@ -1483,95 +1487,94 @@ body{
     grid-area:Database;
 }
 
-
-
-/* My Skills Style */
-
-.grid-areas-skills{
-    display:grid;
+/* Interest */
+.Interest-grid-template{
+    display: grid;
     gap: var(--_spacer);
-    justify-content: center;
-    grid-template-areas: 
-    'FrontEnd' 
-    'BackEnd'
-    'Database';
-
+    grid-template-columns: repeat(1, 1fr);
 }
 
-
-
-.BackEnd>div{
-    text-align: center;
-}
-.BackEnd{
-    margin-inline: 3rem;
-}
-.Database>div{
-    text-align: center;
-}
-.Database{
-    margin-inline: 3rem;
-}
-
-@media(min-width:34em){
-    .grid-areas-skills{
-        display:grid;
-        gap: var(--_spacer);
-        justify-content: center;
-        grid-template-areas: 
-        'FrontEnd FrontEnd' 
-        'BackEnd Database';
-    
+@media(min-width:30em) and (max-width:70em){
+    .Interest-grid-template{
+        grid-template-columns: repeat(2, 1fr);
     }
-    
 }
-.grid-areas-skills>.FrontEnd>.skills-diplay-flex{
-    display: flex;
-    gap: var(--_spacer);
-    list-style: none;
-    text-align: center;
- 
+
+@media(min-width:70em){
+    .Interest-grid-template{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
-.platform>p>i>img,
-.BackEnd>div>p>i>img,
-.Database>div>p>i>img{
-    max-width: 2rem;
-    display: inline;
-   
-}
-.skills-diplay-flex>li>p,
-.BackEnd>div,
-.Database>div{
-    
-    padding: 0.5rem 1rem;
-    background: linear-gradient(90deg, var(--clr-primary-neutral-400) 45%, rgba(93,178,165,0.4));
-    border-radius: 0.3rem;
+
+.Interest-grid-template>*{
     box-shadow: 0px 1px 0px 0px  rgba(0,0,0,0.04),
-    -1px 0px 0px 0px rgba(0,0,0,0.04), 
-    -1px 2px 0px 0px rgba(0,0,0,0.04), 
-    -2px 1px 0px 0px rgba(0,0,0,0.04), 
-    -2px 3px 0px 0px rgba(0,0,0,0.04), 
-    -3px 2px 0px 0px rgba(0,0,0,0.04), 
-    -3px 4px 0px 0px rgba(0,0,0,0.04), 
-    -4px 3px 0px 0px rgba(0,0,0,0.04), 
-    -4px 5px 0px 0px rgba(0,0,0,0.04), 
-    -5px 4px 0px 0px rgba(0,0,0,0.04), 
-    -5px 6px 0px 0px rgba(0,0,0,0.04), 
-    -6px 5px 0px 0px rgba(0,0,0,0.04), 
-    -6px 7px 0px 0px rgba(0,0,0,0.04), 
-    -7px 6px 0px 0px rgba(0,0,0,0.04), 
-    -7px 8px 0px 0px rgba(0,0,0,0.04), 
-    -8px 7px 0px 0px rgba(0,0,0,0.04);
-   
+                -1px 0px 0px 0px rgba(0,0,0,0.04), 
+                -1px 2px 0px 0px rgba(0,0,0,0.04), 
+                -2px 1px 0px 0px rgba(0,0,0,0.04), 
+                -2px 3px 0px 0px rgba(0,0,0,0.04), 
+                -3px 2px 0px 0px rgba(0,0,0,0.04), 
+                -3px 4px 0px 0px rgba(0,0,0,0.04), 
+                -4px 3px 0px 0px rgba(0,0,0,0.04), 
+                -4px 5px 0px 0px rgba(0,0,0,0.04), 
+                -5px 4px 0px 0px rgba(0,0,0,0.04), 
+                -5px 6px 0px 0px rgba(0,0,0,0.04), 
+                -6px 5px 0px 0px rgba(0,0,0,0.04), 
+                -6px 7px 0px 0px rgba(0,0,0,0.04), 
+                -7px 6px 0px 0px rgba(0,0,0,0.04), 
+                -7px 8px 0px 0px rgba(0,0,0,0.04), 
+                -8px 7px 0px 0px rgba(0,0,0,0.04);
+    background: linear-gradient(90deg, var(--clr-primary-neutral-400) 45%, rgba(93,178,165,0.4));
+    padding: 2rem;
+    border-radius: 0.3rem;
+}
+.Interest-grid-template>*:hover{
+    cursor: pointer;
+}
+.Interest2::before,
+.Interest1::before,
+.Interest3::before,
+.Interest4::before,
+.Interest5::before,
+.Interest6::before{
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    color: var(--clr-primary-accent-400);
+}
+.Interest2>h6,
+.Interest1>h6,
+.Interest3>h6,
+.Interest4>h6,
+.Interest5>h6,
+.Interest6>h6{
+    display: inline-flex;
+    padding-inline: 2rem;
 }
 
-
-
-.FrontEnd>h3,
-.BackEnd>h3,
-.Database>h3{
-    text-align: center;
+.Interest1::before{
+    font: var(--fa-font-solid);
+    content: "\f008";
 }
+.Interest2::before{
+    font: var(--fa-font-solid);
+    content: "\f11b";
+}
+.Interest3::before{
+  font: var(--fa-font-solid);
+    content: "\f001";
+}
+.Interest4::before{
+  font: var(--fa-font-solid);
+    content: "\f121";
+}
+.Interest5::before{
+  font: var(--fa-font-solid);
+    content: "\f434";
+}
+.Interest6::before{
+  font: var(--fa-font-solid);
+    content: "\f44b";
+}
+
 
 
 /* Certificates Style */
