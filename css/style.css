@@ -386,7 +386,7 @@ body{
 }
 
 .Border.skills{
-    width: min(50%,100%);
+    width: min(60%,100%);
 }
 /* general styling */
 
@@ -676,7 +676,7 @@ body{
 }
 
 
-@media(min-width:47.9375em) and (max-width:69em){
+@media(min-width:47.9375em) and (max-width:70em){
     .-My-Img-Bg.tablet{
         max-width: 30rem;
     }
@@ -712,7 +712,7 @@ body{
     }
     
 } 
-@media(min-width:69em){
+@media(min-width:70em){
     .horizontal-heading>img{
         width: var(--size-600);
     }
