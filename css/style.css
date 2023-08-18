@@ -1352,10 +1352,10 @@ body{
 .Card{
 
     display: grid;
-    background-image:  radial-gradient(circle at top right,rgba(245, 246, 252, 0.30),var(--clr-primary-neutral-400),var(--clr-primary-neutral-400)),url('../assets/Icon/GridLayout.png');
+    background-image:  radial-gradient(circle at top center,rgba(93,178,165,0.30),var(--clr-primary-neutral-400),var(--clr-primary-neutral-400)),url('../assets/Icon/GridLayout.png');
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: right top;
+    background-position: center top;
     grid-template-areas: 
     'one' 
     'two'
@@ -1379,6 +1379,17 @@ body{
     -8px 7px 0px 0px rgba(0,0,0,0.04);
   
  
+}
+
+@media(min-width:70em){
+    .Card{
+
+        background-image:  radial-gradient(circle at top right,rgba(93,178,165,0.30),var(--clr-primary-neutral-400),var(--clr-primary-neutral-400)),url('../assets/Icon/GridLayout.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right top;
+
+    }
 }
 
 
@@ -1613,6 +1624,7 @@ body{
     transition: max-width 0.5s ease-in-out;
     border-radius: 0.3rem;
     margin-inline: auto;
+    aspect-ratio: 21/14;
 }
 .Cert_List{
     display: flex;
